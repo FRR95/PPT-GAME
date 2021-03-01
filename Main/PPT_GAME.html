@@ -7,7 +7,7 @@
        
 </head>
 <body>
-    <div ng-app="appppt" ng-controller="pptcontroller" > 
+ <!--   <div ng-app="appppt" ng-controller="pptcontroller" > 
         
             Elige tu opción:
             <select ng-model="selectedName" ng-options="x for x in names"></select>
@@ -20,6 +20,24 @@
             <p id="Result"></p>
             </div>
             
+    </div>
+-->
+    <div ng-app="PPTApp">
+        <div ng-controller="PPTController">
+            Elige una opción
+            <select ng-model="PlayerSelection" ng-options="item for item in OptionsPlayer" id="PlayerSelect"></select>
+             
+          
+            
+                <button ng-click="Func_PPT()" >Listo</button>
+
+
+            <div ng-show="ShowResult" >
+            <div>Elegiste: {{ PlayerSelection }}</div>
+            <div id="MachineResult"></div>
+            <div ng-if="PlayerSelection=='Tijera' && MachineAnswer=='Tijera'" id="Result">sdfsdfsdfsdfsdfsadf</div>
+            </div>
+        </div>
     </div>
 
    
