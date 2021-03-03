@@ -9,6 +9,7 @@
 <body>
 
     <div ng-app="PPTApp">
+    <PPT_GAME></PPT_GAME>
         <div ng-controller="PPTController">
             Elige una opción
             <select ng-model="Player1Selection" ng-options="item for item in OptionsPlayer1" id="Player1Select"></select>
@@ -19,28 +20,33 @@
              
           
             
-                <button ng-click="Func_PPT()" >Listo</button>
+                <button ng-click="ShowResult = !ShowResult;Player1Wins=Player1Wins + 1;Player2Wins=Player2Wins + 1 " ng-init="Player1Wins=0;Player2Wins=0" >Listo</button>
 
 
             <div ng-show="ShowResult" >
             <div>Jugador 1 eligió: {{ Player1Selection }}</div>
             <div>Jugador 2 eligió: {{ Player2Selection }}</div>
+            <button ng-click="ShowResult = !ShowResult;" >Volver a jugar</button>
+           
+
            
             
-            <div id="MachineResult"></div>
+            
             <!-- Empates -->
-            <div ng-if="Player1Selection=='Piedra' && Player2Selection=='Piedra'" id="Result">Empate</div>
+            <div ng-if="Player1Selection=='Piedra' && Player2Selection=='Piedra'"  id="Result">Empate</div>
             <div ng-if="Player1Selection=='Papel' && Player2Selection=='Papel'" id="Result">Empate</div>
             <div ng-if="Player1Selection=='Tijera' && Player2Selection=='Tijera'" id="Result">Empate</div>
             <!-- Victorias Player1 -->
-            <div ng-if="Player1Selection=='Piedra' && Player2Selection=='Tijera'" id="Result">Jugador 1 Gana</div>
-            <div ng-if="Player1Selection=='Papel' && Player2Selection=='Piedra'" id="Result">Jugador 1 Gana</div>
-            <div ng-if="Player1Selection=='Tijera' && Player2Selection=='Papel'" id="Result">Jugador 1 Gana</div>
+            <div ng-if="Player1Selection=='Piedra' && Player2Selection=='Tijera'; " id="Result">Jugador 1 gana </div>
+            <div ng-if="Player1Selection=='Papel' && Player2Selection=='Piedra'" id="Result">Jugador 1 gana </div>
+            <div ng-if="Player1Selection=='Tijera' && Player2Selection=='Papel'" id="Result">Jugador 1 gana </div>
             <!-- Victorias Player2 -->
-            <div ng-if="Player1Selection=='Tijera' && Player2Selection=='Piedra'" id="Result">Jugador 2 Gana</div>
-            <div ng-if="Player1Selection=='Piedra' && Player2Selection=='Papel'" id="Result">Jugador 2 Gana</div>
-            <div ng-if="Player1Selection=='Papel' && Player2Selection=='Tijera'" id="Result">Jugador 2 Gana</div>
+            <div ng-if="Player1Selection=='Tijera' && Player2Selection=='Piedra'" id="Result">Jugador 2 gana </div>
+            <div ng-if="Player1Selection=='Piedra' && Player2Selection=='Papel'" id="Result">Jugador 2 gana </div>
+            <div ng-if="Player1Selection=='Papel' && Player2Selection=='Tijera'" id="Result">Jugador 2 gana </div>
             </div>
+        <div>Jugador 1 lleva {{ Player1Wins }} victorias</div>
+        <div>Jugador 2 lleva {{ Player2Wins }} victorias</div>
         </div>
     </div>
 

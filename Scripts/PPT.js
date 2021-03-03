@@ -14,19 +14,14 @@ var PPTApp = angular.module('PPTApp', []);
       
       
      
-      $scope.ShowResult = false;
+      /*$scope.ShowResult = false;*/
       $scope.Player1Selection = $scope.OptionsPlayer1[0];
       $scope.Player2Selection = $scope.OptionsPlayer2[0];
      
      
      
       
-      $scope.Func_PPT = function() {
-       
-        $scope.ShowResult = !$scope.ShowResult;
-        
-      
-      }
+     
     });
 
 
