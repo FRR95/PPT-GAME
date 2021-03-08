@@ -20,13 +20,13 @@
              
           
             
-                <button ng-click="ShowResult = !ShowResult;Player1Wins=Player1Wins + 1;Player2Wins=Player2Wins + 1 " ng-init="Player1Wins=0;Player2Wins=0" >Listo</button>
+                <button ng-click="FunctionResult()" ng-init="Player1Wins=0;Player2Wins=0" >Listo</button>
 
 
             <div ng-show="ShowResult" >
             <div>Jugador 1 eligió: {{ Player1Selection }}</div>
             <div>Jugador 2 eligió: {{ Player2Selection }}</div>
-            <button ng-click="ShowResult = !ShowResult;" >Volver a jugar</button>
+            <button ng-click="hideresult()" >Volver a jugar</button>
            
 
            
