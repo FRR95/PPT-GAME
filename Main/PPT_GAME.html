@@ -4,6 +4,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../Scripts/PPT.js"></script>
+    <link rel="stylesheet" href="../Styles/CommonStyle.css">
        
 </head>
 <body>
@@ -11,21 +12,19 @@
     <div ng-app="PPTApp">
     <PPT_GAME></PPT_GAME>
         <div ng-controller="PPTController">
-            Elige una opción
+            <div class="PlayersSelections">
+            Elección del Jugador 1:
             <select ng-model="Player1Selection" ng-options="item for item in OptionsPlayer1" id="Player1Select"></select>
+            Elección del Jugador 2:
             <select ng-model="Player2Selection" ng-options="item for item in OptionsPlayer2" id="Player2Select"></select>
-            
-            
-            
-             
-          
-            
-                <button ng-click="FunctionResult()" ng-init="Player1Wins=0;Player2Wins=0" >Listo</button>
-
+            <button ng-click="FunctionResult()" ng-init="Player1Wins=0;Player2Wins=0" >Listo</button>
+        </div>
 
             <div ng-show="ShowResult" >
-            <div>Jugador 1 eligió: {{ Player1Selection }}</div>
-            <div>Jugador 2 eligió: {{ Player2Selection }}</div>
+                <div class="PlayersElections">
+            <div class="Player1Selection">Jugador 1 eligió: {{ Player1Selection }}</div>
+            <div class="Player2Selection">Jugador 2 eligió: {{ Player2Selection }}</div>
+               </div>
             <button ng-click="hideresult()" >Volver a jugar</button>
            
 
@@ -45,8 +44,19 @@
             <div ng-if="Player1Selection=='Piedra' && Player2Selection=='Papel'" id="Result">Jugador 2 gana </div>
             <div ng-if="Player1Selection=='Papel' && Player2Selection=='Tijera'" id="Result">Jugador 2 gana </div>
             </div>
-        <div>Jugador 1 lleva {{ Player1Wins }} victorias</div>
-        <div>Jugador 2 lleva {{ Player2Wins }} victorias</div>
+    
+        <table style="width:50%">
+        <tr>
+            <th>Jugador 1</th>
+            <th>Jugador 2</th> 
+            
+        </tr>
+        <tr>
+            <td>{{ Player1Wins }}</td>
+            <td>{{ Player2Wins }}</td>
+           
+        </tr>
+       </table>
         </div>
     </div>
 

@@ -1,0 +1,68 @@
+html{
+background-color: #9676f0;
+font-family: 'Courier New', Courier, monospace;
+}
+img{
+    margin-left: 35%;
+}
+.linkscontent{
+margin-top:10%;
+margin-left: 37%;
+}
+a{
+color:#3e11bb;
+background-color:white;
+text-decoration-line: none;
+}
+
+.PlayersSelections{
+    margin-left: 29%;
+    margin-top:5%; 
+}
+.PlayersSelections button{
+   margin-left:15px;
+   margin-top:-2px;
+}
+.PlayersSelectionsMachine{
+    margin-left: 41%;
+    margin-top:5%; 
+}
+.PlayersSelectionsMachine button{
+   margin-left:15px;
+   margin-top:-2px;
+}
+.PlayersElections{
+    margin-left: 41%;  
+    margin-top:10%; 
+    position: absolute;
+}
+table, th, td{
+    border: 1px solid black;
+    
+   
+}
+
+table{
+    margin-top:35%;
+    margin-left:49%;
+    position: absolute;
+}    
+
+#Result{
+Color:#3e11bb;
+position: absolute;
+margin-top:15%; 
+margin-left:44%;
+}
+
+button{
+    background-Color:#3e11bb;
+    color:white;
+    position: absolute;
+    margin-top:20%; 
+    margin-left:45.1%;
+
+}
+th{
+background-color: white;
+}
