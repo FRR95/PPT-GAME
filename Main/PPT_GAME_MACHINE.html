@@ -5,7 +5,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../Scripts/PPT_MACHINE.js"></script>
     <link rel="stylesheet" href="../Styles/CommonStyle.css">
-       
+    
 </head>
 <body>
 
@@ -28,7 +28,8 @@
             <div ng-show="ShowResult" >
             <div id="Result"></div>
             <div class="PlayersElections">
-            <div  ng-repeat="MachineOption in MachineArray">La máquina eligió: {{RandomMachineAnswer.value}}</div>
+            <div ng-repeat="MachineOption in MachineArray"></div>
+           <div>La máquina eligió: {{RandomMachineAnswer}}</div>
             <div>Jugador  eligió: {{ Player1Selection }}</div>
             </div>
             <button ng-click="hideresult()" >Volver a jugar</button>
