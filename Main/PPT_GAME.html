@@ -19,12 +19,14 @@
             <select ng-model="Player2Selection" ng-options="item for item in OptionsPlayer2" id="Player2Select"></select>
             <button ng-click="FunctionResult()" ng-init="Player1Wins=0;Player2Wins=0" >Listo</button>
         </div>
+        <a class="BackToMenuLink" href="Index.html" >Volver al menu</a>
 
             <div ng-show="ShowResult" >
                 <div class="PlayersElections">
             <div class="Player1Selection">Jugador 1 eligió: {{ Player1Selection }}</div>
             <div class="Player2Selection">Jugador 2 eligió: {{ Player2Selection }}</div>
                </div>
+           
             <button ng-click="hideresult()" >Volver a jugar</button>
            
 
