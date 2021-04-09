@@ -1,0 +1,1 @@
+mongodb+srv://FR95:<18NOVIEMBRE95>@cluster0.hyuiz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority

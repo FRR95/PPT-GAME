@@ -9,21 +9,10 @@ var PPTApp = angular.module('PPTApp', []);
     
       $scope.OptionsPlayer1 = ["Piedra", "Papel", "Tijera"];
      
-     /* $scope.MachineArray = [
-        {
-            value: "Piedra"
-        },
-        {
-            value: "Papel"
-        },
-        {
-          value: "Tijera"
-      },
-
-    ];*/
+    
     $scope.MachineArray = ["Piedra", "Papel", "Tijera"];
      
-      
+
       
      
       $scope.ShowResult = false;
@@ -84,8 +73,14 @@ var PPTApp = angular.module('PPTApp', []);
           });
       
        }
-      
-      
+      /*
+       if($scope.Player1Wins==5){
+        alert('Jugador gana');
+        }
+        if($scope.MachineWins==5){
+        alert('Máquina gana');
+        }
+      */
       
       }
       $scope.hideresult = function () {
@@ -93,6 +88,9 @@ var PPTApp = angular.module('PPTApp', []);
         $scope.ShowResult = false;
     
       }
+
+     
+
      
       
      

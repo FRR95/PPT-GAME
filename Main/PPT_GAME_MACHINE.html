@@ -36,16 +36,21 @@
             <button ng-click="hideresult()" >Volver a jugar</button>
 
             </div>
-        <table style="width:50%">
+        <table style="width:50%"  >
             <tr>
                 <th>Jugador </th>
                 <th>Máquina</th> 
                 
             </tr>
             <tr>
-                <td>{{ Player1Wins }}</td>
-                <td>{{ MachineWins }} </td>
+                <td name="playerwins">{{ Player1Wins }}</td>
+                <td name="machinewins">{{ MachineWins }} </td>
                
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" value="ENVIAR" name="enviar">
+                </td>
             </tr>
            </table>
         </div>
