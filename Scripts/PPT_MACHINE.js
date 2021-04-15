@@ -2,6 +2,7 @@ var PPTApp = angular.module('PPTApp', []);
 
     PPTApp.controller('PPTController', function($scope) {
       $scope.OptionsPlayer1 = ["Piedra", "Papel", "Tijera"];
+<<<<<<< HEAD
      //TODO: Elimina codigo comentado
      /* $scope.MachineArray = [
         {
@@ -17,6 +18,15 @@ var PPTApp = angular.module('PPTApp', []);
     ];*/
     $scope.MachineArray = ["Piedra", "Papel", "Tijera"];
 
+=======
+     
+    
+    $scope.MachineArray = ["Piedra", "Papel", "Tijera"];
+     
+
+      
+     
+>>>>>>> cc647467e4a3e5a2c2aa8a59f9ed137ff8d11744
       $scope.ShowResult = false;
       $scope.Player1Selection = $scope.OptionsPlayer1[0];
       $scope.FunctionResult = function () {
@@ -70,10 +80,31 @@ var PPTApp = angular.module('PPTApp', []);
           $("#Result").html('Empate');
           });
        }
+<<<<<<< HEAD
+=======
+      /*
+       if($scope.Player1Wins==5){
+        alert('Jugador gana');
+        }
+        if($scope.MachineWins==5){
+        alert('Máquina gana');
+        }
+      */
+      
+>>>>>>> cc647467e4a3e5a2c2aa8a59f9ed137ff8d11744
       }
         
       $scope.hideresult = function () {
         $scope.ShowResult = false;
       }
+<<<<<<< HEAD
     
+=======
+
+     
+
+     
+      
+     
+>>>>>>> cc647467e4a3e5a2c2aa8a59f9ed137ff8d11744
     });
