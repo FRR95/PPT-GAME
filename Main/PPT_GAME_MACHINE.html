@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>PPT_GAME</title>
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../Scripts/PPT_MACHINE.js"></script>
@@ -36,18 +36,21 @@
             <button ng-click="hideresult()" >Volver a jugar</button>
 
             </div>
-        <table style="width:50%">
+         
+        <table style="width:50%"  >
             <tr>
                 <th>Jugador </th>
                 <th>Máquina</th> 
                 
             </tr>
             <tr>
-                <td>{{ Player1Wins }}</td>
-                <td>{{ MachineWins }} </td>
+                <td name="playerwins">{{ Player1Wins }}</td>
+                <td name="machinewins">{{ MachineWins }} </td>
                
             </tr>
+           
            </table>
+        
         </div>
     </div>
 
@@ -58,5 +61,6 @@
 <footer>
 
 </footer> 
+
 
 </html>

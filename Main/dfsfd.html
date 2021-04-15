@@ -1,0 +1,56 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<div>
+
+<form action="stats.php" method="POST">
+<table>
+<tr>
+<td>
+<input type="text" name="playerwins">    
+</td>
+</tr>
+<tr>
+<td>
+<input type="text" name="machinewins">      
+</td>
+</tr>
+<tr>
+<td>
+<input id="form_register_button" type="submit" value="ENVIAR" name="enviar">   
+</td>
+</tr>
+</table>
+</form>
+</div>
+</body>
+<footer>
+</footer>
+<script>
+
+$(function(){
+$('#form_register_button').click(function(e){
+e.preventDefault();
+  
+
+
+$.ajax({
+    type: 'post',
+    url: 'stats.php',
+	data: $('form').serialize(),
+   
+  
+    success: function (data) {
+	  alert('form was submitted');
+	  console.log(data);
+    }
+ 
+})
+})
+});
+
+</script>
+</html>
