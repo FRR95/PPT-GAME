@@ -10,12 +10,12 @@
 <table>
 <tr>
 <td>
-<input type="text" name="playerwins">    
+<input type="text" id="playerwins">    
 </td>
 </tr>
 <tr>
 <td>
-<input type="text" name="machinewins">      
+<input type="text" id="machinewins">      
 </td>
 </tr>
 <tr>
@@ -35,7 +35,7 @@ $(function(){
 $('#form_register_button').click(function(e){
 e.preventDefault();
   
-
+window.location.href = 'stats.php';
 
 $.ajax({
     type: 'post',
