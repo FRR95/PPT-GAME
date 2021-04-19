@@ -2,31 +2,9 @@ var PPTApp = angular.module('PPTApp', []);
 
     PPTApp.controller('PPTController', function($scope) {
       $scope.OptionsPlayer1 = ["Piedra", "Papel", "Tijera"];
-<<<<<<< HEAD
-     //TODO: Elimina codigo comentado
-     /* $scope.MachineArray = [
-        {
-            value: "Piedra"
-        },
-        {
-            value: "Papel"
-        },
-        {
-          value: "Tijera"
-      },
 
-    ];*/
     $scope.MachineArray = ["Piedra", "Papel", "Tijera"];
 
-=======
-     
-    
-    $scope.MachineArray = ["Piedra", "Papel", "Tijera"];
-     
-
-      
-     
->>>>>>> cc647467e4a3e5a2c2aa8a59f9ed137ff8d11744
       $scope.ShowResult = false;
       $scope.Player1Selection = $scope.OptionsPlayer1[0];
       $scope.FunctionResult = function () {
@@ -80,31 +58,60 @@ var PPTApp = angular.module('PPTApp', []);
           $("#Result").html('Empate');
           });
        }
-<<<<<<< HEAD
-=======
-      /*
        if($scope.Player1Wins==5){
-        alert('Jugador gana');
+        
+        $(function(){
+          $.ajax({
+            type: 'post',
+            url: 'stats.php',
+          data: $('form').serialize(),
+           
+          
+            success: function (data) {
+              alert('Ha ganado el jugador');
+            console.log(data);
+            alert('Volviendo al menu principal');
+            window.location.href = "Index.html";
+            }
+         
+        })
+  
+  
+        });
+       
         }
-        if($scope.MachineWins==5){
-        alert('Máquina gana');
+        else if($scope.MachineWins==5){
+         
+          $(function(){
+            $.ajax({
+              type: 'post',
+              url: 'stats.php',
+            data: $('form').serialize(),
+             
+            
+              success: function (data) {
+                alert('Ha ganado la máquina');
+              console.log(data);
+              alert('Volviendo al menu principal');
+              window.location.href = "Index.html";
+             
+              }
+           
+          })
+    
+    
+          });
+          
         }
-      */
-      
->>>>>>> cc647467e4a3e5a2c2aa8a59f9ed137ff8d11744
       }
+
+    
+
+
+      
         
       $scope.hideresult = function () {
         $scope.ShowResult = false;
       }
-<<<<<<< HEAD
     
-=======
-
-     
-
-     
-      
-     
->>>>>>> cc647467e4a3e5a2c2aa8a59f9ed137ff8d11744
     });

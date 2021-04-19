@@ -36,7 +36,7 @@
             <button ng-click="hideresult()" >Volver a jugar</button>
 
             </div>
-         
+        <form  method="POST">
         <table style="width:50%"  >
             <tr>
                 <th>Jugador </th>
@@ -44,12 +44,20 @@
                 
             </tr>
             <tr>
-                <td name="playerwins">{{ Player1Wins }}</td>
-                <td name="machinewins">{{ MachineWins }} </td>
+                <td  >{{ Player1Wins }}</td>
+                <td  >{{ MachineWins }} </td>
+                
                
             </tr>
            
+          
+           
            </table>
+           <div class="score_content_db" style="display: none;">
+           <input type="text" name="playerwins" value="{{ Player1Wins }}"> 
+           <input type="text" name="machinewins" value="{{ MachineWins }}">
+          </div>
+           </form>
         
         </div>
     </div>

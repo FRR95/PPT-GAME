@@ -1,6 +1,7 @@
 <?php
 
 $conectar = mysqli_connect('localhost','fran','18Noviembre95', 'fran');
+header('Access-Control-Allow-Origin: localhost:3306');
 
 
 if(!$conectar){
@@ -23,6 +24,6 @@ if(!$ejecutar){
 else{
    echo "Datos almacenados correctamente";
 }
-
 exit;
+
 ?>
