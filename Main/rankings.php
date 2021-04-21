@@ -17,21 +17,23 @@
 
 <br>
 
-	<table  >
+	<table class="score_results">
 		<tr>
+		    <td>Resultado</td>
 			<td>Jugador</td>
 			<td>Máquina</td>
 			
 		</tr>
 
 		<?php 
-		$sql="SELECT * FROM `playerstats`";
+		$sql="SELECT * FROM `playerstats1`";
 		$result=mysqli_query($conectar,$sql);
 
 		while($mostrar=mysqli_fetch_array($result)){
 		 ?>
 
-		<tr>
+		<tr class="color_state">
+		    <td><?php echo $mostrar['states'] ?></td>
 			<td><?php echo $mostrar['playerwins'] ?></td>
 			<td><?php echo $mostrar['machinewins'] ?></td>
 	

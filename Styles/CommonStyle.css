@@ -72,3 +72,13 @@ button{
     margin-top:20%; 
     margin-left:45.1%;
 }
+
+.score_results{
+    position: absolute;
+    top: -121px;
+    left: -129px;
+}
+.color_state{
+background-color: rgb(79, 155, 226);   
+}
+

@@ -63,7 +63,7 @@ var PPTApp = angular.module('PPTApp', []);
         $(function(){
           $.ajax({
             type: 'post',
-            url: 'stats.php',
+            url: 'stats_win.php',
           data: $('form').serialize(),
            
           
@@ -85,7 +85,7 @@ var PPTApp = angular.module('PPTApp', []);
           $(function(){
             $.ajax({
               type: 'post',
-              url: 'stats.php',
+              url: 'stats_lose.php',
             data: $('form').serialize(),
              
             

@@ -12,7 +12,7 @@ else{
 $playerwins = $_POST['playerwins'];
 $machinewins = $_POST['machinewins'];
 
-$sql = "INSERT INTO playerstats(playerwins,machinewins) values($playerwins,$machinewins)";
+$sql = "INSERT INTO playerstats1(states,playerwins,machinewins) values('DERROTA',$playerwins,$machinewins)";
 
 $ejecutar = mysqli_query($conectar, $sql);
 
